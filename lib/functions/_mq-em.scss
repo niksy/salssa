@@ -1,0 +1,19 @@
+/**
+ * Font-size-safe em conversion
+ *
+ * Always convert pixel values to em values with 16px as em base.
+ * Useful when you’ve defined different em base for the whole project
+ * but want your media queries in ems (since they *always* take 16px as base).
+ *
+ * @requires {function} em
+ *
+ * @param {number} $pxval - Pixel value to convert
+ *
+ * @returns {number}
+ */
+@function mq-em ( $pxval ) {
+	@if not function-exists(em) {
+		@error 'Function `em` is not available, have you forgotten to include Bourbon?';
+	}
+	@return em($pxval, 16);
+}

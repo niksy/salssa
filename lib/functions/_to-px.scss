@@ -1,0 +1,24 @@
+/**
+ * Return value in pixels.
+ *
+ * Useful when you have numbers as variables and don’t want to bother with
+ * concatenation of strings.
+ *
+ * @requires {function} strip-units
+ *
+ * @param {number} $val - Value to convert
+ *
+ * @returns {number}
+ */
+@function to-px ( $val ) {
+	@if type-of($val) != 'number' {
+		@error 'You’re passing string as pixel value to `to-px` function; you should use number instead.';
+	}
+	@if not unitless($val) {
+		@if not function-exists(strip-units) {
+			@error 'Function `strip-units` is not available, have you forgotten to include Bourbon?';
+		}
+		$val: strip-units($val);
+	}
+	@return $val * 1px;
+}

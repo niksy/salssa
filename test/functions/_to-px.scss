@@ -1,0 +1,13 @@
+// @import "bourbon";
+@import "lib/functions/to-px";
+
+@include describe('Create pixel value') {
+
+	@include it('should return value with units') {
+		@include should(expect(to-px(1)), to(be(1px)));
+		@include should(expect(to-px(1 + 1)), to(be(2px)));
+		@include should(expect(to-px(1 + 3)), to(be(4px)));
+		@include should(expect(to-px(4px + 4px)), to(be(8px)));
+		@include should(expect(to-px(strip-units(4%) + strip-units(5em) + strip-units(2px))), to(be(11px)));
+	}
+}

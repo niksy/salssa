@@ -1,0 +1,15 @@
+/**
+ * Opacity
+ *
+ * @param  {number} $val - 0-1 value for opacity
+ * @param  {boolean} $oldie: - Support old IE
+ *
+ * @output Opacity values
+ */
+@mixin opacity ( $val, $oldie: true ) {
+	opacity:$val;
+	@if $oldie {
+		$val-ie: $val * 100;
+		filter:alpha(opacity=$val-ie);
+	}
+}

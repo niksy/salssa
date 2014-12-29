@@ -1,0 +1,152 @@
+linters:
+    BangFormat:
+        enabled: true
+        space_before_bang: true
+
+    BorderZero:
+        enabled: true
+
+    ColorKeyword:
+        enabled: true
+
+    Comment:
+        enabled: false
+
+    DebugStatement:
+        enabled: true
+
+    DeclarationOrder:
+        enabled: true
+
+    DuplicateProperty:
+        enabled: false
+
+    ElsePlacement:
+        enabled: true
+        style: same_line
+
+    EmptyLineBetweenBlocks:
+        enabled: true
+        ignore_single_line_blocks: true
+
+    EmptyRule:
+        enabled: true
+
+    FinalNewline:
+        enabled: true
+        present: true
+
+    HexFormat:
+        enabled: true
+        style: short
+
+    HexNotation:
+        enabled: true
+        style: lowercase
+
+    HexValidation:
+        enabled: true
+
+    IdSelector:
+        enabled: true
+
+    ImportPath:
+        enabled: true
+        leading_underscore: false
+        filename_extension: false
+
+    Indentation:
+        enabled: true
+        character: tab
+        width: 1
+
+    LeadingZero:
+        enabled: true
+        style: include_zero
+
+    MergeableSelector:
+        enabled: false
+
+    NameFormat:
+        enabled: true
+        allow_leading_underscore: true
+        convention: hyphenated_lowercase
+
+    NestingDepth:
+        enabled: false
+
+    PlaceholderInExtend:
+       enabled: true
+
+    PropertySortOrder:
+        enabled: false
+
+    PropertySpelling:
+        enabled: true
+
+    QualifyingElement:
+        enabled: true
+        allow_element_with_attribute: true
+        allow_element_with_class: false
+        allow_element_with_id: false
+
+    SelectorDepth:
+        enabled: true
+        max_depth: 3
+
+    SelectorFormat:
+        enabled: false
+
+    Shorthand:
+        enabled: true
+
+    SingleLinePerProperty:
+        enabled: false
+
+    SingleLinePerSelector:
+        enabled: true
+
+    SpaceAfterComma:
+        enabled: true
+
+    SpaceAfterPropertyColon:
+        enabled: false
+
+    SpaceAfterPropertyName:
+        enabled: true
+
+    SpaceBeforeBrace:
+        enabled: true
+        allow_single_line_padding: true
+        style: space
+
+    SpaceBetweenParens:
+        enabled: false
+
+    StringQuotes:
+        enabled: true
+        style: single_quotes
+
+    TrailingSemicolon:
+        enabled: true
+
+    TrailingZero:
+        enabled: false
+
+    UnnecessaryMantissa:
+        enabled: true
+
+    UnnecessaryParentReference:
+        enabled: true
+
+    UrlFormat:
+        enabled: true
+
+    UrlQuotes:
+        enabled: true
+
+    VendorPrefixes:
+        enabled: true
+
+    ZeroUnit:
+        enabled: true

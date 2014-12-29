@@ -1,0 +1,152 @@
+@import "lib/mixins/scoped-media-query";
+
+/* Single query */
+@include scoped-media-query(
+	('screen and (min-width:500px)')
+) {
+	color:red;
+}
+
+@include scoped-media-query(
+	('screen and (min-width:500px)')
+) {
+	.foo {
+		color:red;
+	}
+}
+
+@include scoped-media-query(
+	('screen and (min-width:500px)','.bar')
+) {
+	.foo {
+		color:red;
+	}
+}
+
+@include scoped-media-query(
+	('screen and (min-width:500px)','.bar')
+) {
+	.foo {
+
+		.bar {
+			color:red;
+		}
+
+		&-bar {
+			color:red;
+		}
+	}
+}
+
+.foo {
+
+	@include scoped-media-query(
+		('screen and (min-width:500px)')
+	) {
+		color:red;
+	}
+}
+
+.foo {
+
+	@include scoped-media-query(
+		('screen and (min-width:500px)','.bar')
+	) {
+		color:red;
+	}
+}
+
+.foo {
+
+	@include scoped-media-query(
+		('screen and (min-width:500px)','.bar')
+	) {
+
+		.bar {
+			color:red;
+		}
+
+		&-bar {
+			color:red;
+		}
+	}
+}
+
+/* Multiple queries */
+@include scoped-media-query(
+	('screen and (min-width:500px)'),
+	('screen and (min-width:1000px)')
+) {
+	color:red;
+}
+
+@include scoped-media-query(
+	('screen and (min-width:500px)'),
+	('screen and (min-width:1000px)')
+) {
+	.foo {
+		color:red;
+	}
+}
+
+@include scoped-media-query(
+	('screen and (min-width:500px)','.bar'),
+	('screen and (min-width:1000px)','.bar')
+) {
+	.foo {
+		color:red;
+	}
+}
+
+@include scoped-media-query(
+	('screen and (min-width:500px)','.bar'),
+	('screen and (min-width:1000px)','.bar')
+) {
+	.foo {
+
+		.bar {
+			color:red;
+		}
+
+		&-bar {
+			color:red;
+		}
+	}
+}
+
+.foo {
+
+	@include scoped-media-query(
+		('screen and (min-width:500px)'),
+		('screen and (min-width:1000px)')
+	) {
+		color:red;
+	}
+}
+
+.foo {
+
+	@include scoped-media-query(
+		('screen and (min-width:500px)','.bar'),
+		('screen and (min-width:1000px)','.bar')
+	) {
+		color:red;
+	}
+}
+
+.foo {
+
+	@include scoped-media-query(
+		('screen and (min-width:500px)','.bar'),
+		('screen and (min-width:1000px)','.bar')
+	) {
+
+		.bar {
+			color:red;
+		}
+
+		&-bar {
+			color:red;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@import "bourbon";
+@import "lib/mixins/box-shadow";
+
+.foo {
+	@include box-shadow(1px 1px #f00);
+}
+
+.bar {
+	@include box-shadow(1px 1px #f00, 2px 2px #000);
+}

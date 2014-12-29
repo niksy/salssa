@@ -1,0 +1,44 @@
+{
+  "name": "salssa",
+  "version": "0.0.0",
+  "description": "Collection of Sass functions and mixins.",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "main": "lib/_salssa.scss",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "bourbon": "git+https://github.com/thoughtbot/bourbon#v4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "bootcamp": "^1.1.7",
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.0.13",
+    "grunt-compile-handlebars": "^1.0.0",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-scss-lint": "^0.3.4",
+    "load-grunt-tasks": "^0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niksy/salssa.git"
+  },
+  "keywords": [
+    "sass",
+    "mixin",
+    "function"
+  ],
+  "bugs": {
+    "url": "https://github.com/niksy/salssa/issues"
+  },
+  "homepage": "https://github.com/niksy/salssa"
+}

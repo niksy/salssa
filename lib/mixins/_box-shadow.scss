@@ -1,0 +1,15 @@
+/**
+ * Box shadow
+ *
+ * @param  {mixed} $values Box shadow values
+ *
+ * @requires {mixin} prefixer
+ *
+ * @output Box shadow content
+ */
+@mixin box-shadow ( $values... ) {
+	@if not mixin-exists(prefixer) {
+		@error 'Mixin `prefixer` is not available, have you forgotten to include Bourbon?';
+	}
+	@include prefixer(box-shadow, $values, webkit spec); // Prefixed values for iOS Safari 3.2 - 4.3, Android 2.1+
+}

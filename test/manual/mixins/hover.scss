@@ -1,0 +1,21 @@
+@import "lib/mixins/hover";
+
+.foo {
+	@include hover;
+}
+
+.bar {
+	@include hover(false);
+}
+
+.bar {
+	@include hover(false) {
+		color:red;
+	};
+}
+
+.baz {
+	@include hover {
+		color:red;
+	};
+}

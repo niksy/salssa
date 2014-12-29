@@ -1,0 +1,9 @@
+@import "lib/mixins/opacity";
+
+.foo {
+	@include opacity(0.5);
+}
+
+.bar {
+	@include opacity(0.5, false);
+}

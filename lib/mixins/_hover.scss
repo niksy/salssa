@@ -1,0 +1,19 @@
+/**
+ * Include focus styles with hover
+ *
+ * @content Standard (S)CSS selectors
+ *
+ * @param {boolean} $remove-outline - Remove default outline for focusable elements
+ *
+ * @output Hover and focus styles
+ */
+@mixin hover ( $remove-outline: true ) {
+
+	&:hover,
+	&:focus {
+		@if $remove-outline {
+			outline:0;
+		}
+		@content;
+	}
+}

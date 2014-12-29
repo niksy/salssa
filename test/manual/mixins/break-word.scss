@@ -1,0 +1,6 @@
+@import "bourbon";
+@import "lib/mixins/break-word";
+
+.foo {
+	@include break-word;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "salssa",
+  "version": "0.0.0",
+  "description": "Collection of Sass functions and mixins.",
+  "authors": [
+    "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)"
+  ],
+  "license": "MIT",
+  "main": "lib/_salssa.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "bourbon": "4.0.0-rc.2"
+  },
+  "homepage": "https://github.com/niksy/salssa",
+  "keywords": [
+    "sass",
+    "mixin",
+    "function"
+  ]
+}

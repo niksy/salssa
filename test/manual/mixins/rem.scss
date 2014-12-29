@@ -1,0 +1,18 @@
+@import "bourbon";
+@import "lib/mixins/rem";
+
+.foo {
+	@include rem(font-size, 1);
+}
+
+.bar {
+	@include rem(margin, 10em);
+}
+
+.baz {
+	@include rem(padding, 10);
+}
+
+.bad {
+	@include rem(padding, 10%);
+}

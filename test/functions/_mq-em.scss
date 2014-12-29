@@ -1,0 +1,15 @@
+@import "bourbon";
+@import "lib/functions/mq-em";
+
+@include describe('Media query ems divide') {
+
+	@include it('should return proper division result without units') {
+		@include should(expect(mq-em(1)), to(be(0.0625em)));
+		@include should(expect(mq-em(32)), to(be(2em)));
+	}
+
+	@include it('should return proper division result with px units') {
+		@include should(expect(mq-em(1px)), to(be(0.0625em)));
+		@include should(expect(mq-em(32px)), to(be(2em)));
+	}
+}

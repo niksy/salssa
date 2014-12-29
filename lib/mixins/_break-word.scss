@@ -1,0 +1,19 @@
+/**
+ * Break long words.
+ *
+ * Ref. http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+ *
+ * 1. Non standard for WebKit.
+ *
+ * @requires {mixin} prefixer
+ *
+ * @output Word break properties
+ */
+@mixin break-word {
+	@if not mixin-exists(prefixer) {
+		@error 'Mixin `prefixer` is not available, have you forgotten to include Bourbon?';
+	}
+	@include prefixer(word-break, break-all, ms spec);
+	word-break:break-word; /* 1 */
+	@include prefixer(hyphens, auto, webkit moz spec);
+}

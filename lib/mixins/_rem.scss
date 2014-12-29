@@ -1,0 +1,58 @@
+/**
+ * Add rem and pixel values for property
+ *
+ * Based on https://github.com/thoughtbot/bourbon/commit/71286444c2264e03426bbb5eb5295666ea0572f4
+ *
+ * @requires {function} strip-units
+ * @requires {function} rem
+ *
+ * @param  {string} $property - Property name
+ * @param  {number} $pxval - Pixel value which will be converted
+ *
+ * @output Rem and pixel values for property
+ */
+@mixin rem ( $property, $pxval ) {
+
+	@if not function-exists(strip-units) {
+		@error 'Function `strip-units` is not available, have you forgotten to include Bourbon?';
+	}
+	@if not function-exists(rem) {
+		@error 'Function `rem` is not available, have you forgotten to include Bourbon?';
+	}
+
+	$base: $em-base;
+
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+
+	$unitless-values: ();
+
+	@each $num in $pxval {
+		@if not unitless($num) {
+			@if unit($num) == 'em' {
+				$num: $num * $base;
+			}
+			$num: strip-units($num);
+		}
+
+		$unitless-values: append($unitless-values, $num);
+	}
+
+	$pxval: $unitless-values;
+
+	$px-values: ();
+	$rem-values: ();
+
+	@each $value in $pxval {
+		$pixel-value: $value * 1px;
+		$px-values: append($px-values, $pixel-value);
+
+		$rem-value: rem($value);
+		$rem-values: append($rem-values, $rem-value);
+	}
+
+	#{$property}: $px-values;
+	#{$property}: $rem-values;
+
+}
