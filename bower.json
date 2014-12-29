@@ -1,6 +1,6 @@
 {
   "name": "salssa",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Collection of Sass functions and mixins.",
   "authors": [
     "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)"
