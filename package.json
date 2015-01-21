@@ -12,7 +12,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "bourbon": "git+https://github.com/thoughtbot/bourbon#v4.0.0-rc.2"
+    "bourbon": "https://github.com/thoughtbot/bourbon/archive/v4.1.1.tar.gz"
   },
   "devDependencies": {
     "bootcamp": "^1.1.7",

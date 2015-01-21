@@ -42,7 +42,7 @@ module.exports = function ( grunt ) {
 				sourcemap: 'none',
 				loadPath: [
 					'./',
-					'node_modules/bourbon/dist'
+					'node_modules/bourbon/app/assets/stylesheets'
 				]
 			},
 			test: {
@@ -58,7 +58,7 @@ module.exports = function ( grunt ) {
 				options: {
 					loadPath: [
 						'./',
-						'node_modules/bourbon/dist',
+						'node_modules/bourbon/app/assets/stylesheets',
 						'node_modules/bootcamp/dist'
 					]
 				},
